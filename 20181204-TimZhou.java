@@ -7,11 +7,13 @@ public class HiddenWord{
     }
     public String getHint(String guess){
         String hint = "";
+        String str;
         for(int i = 0; i < word.length(); i++){
-            if(word.subString(i).equals(guess.subString(i)){
-                hint += word.subString(i);
+            str = guess.subString(i,i+1);
+            if(word.subString(i,i+1).equals(str){
+                hint += word.subString(i+1);
             }
-            else if(word.indexOf(guess.subString(i)) != -1){
+            else if(word.indexOf(str) != -1){
                 hint += "+";
             }
             else
